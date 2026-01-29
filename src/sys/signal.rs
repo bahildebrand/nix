@@ -448,7 +448,7 @@ libc_bitflags! {
         /// When catching a [`Signal::SIGCHLD`] signal, the system will not
         /// create zombie processes when children of the calling process exit.
         #[cfg(not(target_os = "hurd"))]
-        SA_NOCLDWAIT;
+        SA_NOCLDWAIT as _;
         /// Further occurrences of the delivered signal are not masked during
         /// the execution of the handler.
         SA_NODEFER;
